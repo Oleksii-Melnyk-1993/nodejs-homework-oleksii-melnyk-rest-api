@@ -1,6 +1,6 @@
 import HttpError from "./HttpError.js";
 
-export const validate = (schema, property) => {
+const validate = (schema, property) => {
   return (req, res, next) => {
     const { error } = schema.validate(req[property]);
     if (error) {
@@ -8,3 +8,5 @@ export const validate = (schema, property) => {
     }
   };
 };
+
+export default validate;
