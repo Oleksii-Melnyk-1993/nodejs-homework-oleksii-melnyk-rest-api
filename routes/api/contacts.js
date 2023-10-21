@@ -7,7 +7,7 @@ import {
   updateContactSchema,
   updateFavoriteSchema,
 } from "../../models/contactModel.js";
-import { authenticate } from "../../middlewares/index.js";
+import { authenticate, upload } from "../../middlewares/index.js";
 import contactController from "../../controllers/contact-controller.js";
 
 const contactsRouter = express.Router();
